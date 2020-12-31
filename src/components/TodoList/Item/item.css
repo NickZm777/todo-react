@@ -1,0 +1,58 @@
+.item > h3 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.info-block {
+  display: flex;
+}
+
+.status-panel {
+  flex-grow: 4;
+  color: white;
+}
+
+.created-date-panel {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.done-date-panel {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.control-block {
+  text-align: right;
+}
+
+.view-button {
+  width: 125px;
+  color: #59e1b4;
+}
+
+.postpone-button {
+  width: 125px;
+  color: #dd9209;
+}
+
+.resume-button {
+  width: 125px;
+  color: rgb(1, 151, 1);
+}
+
+.delete-button {
+  width: 125px;
+  color: #ff3838;
+}
+
+.done-button {
+  width: 125px;
+  color: #bbbbf7;
+}
+
+h3 {
+  color: #bbbbf7;
+  text-transform: uppercase;
+  font-family: cursive;
+}

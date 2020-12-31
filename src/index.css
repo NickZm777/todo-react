@@ -1,13 +1,135 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 700px;
+  background-color: rgb(43, 41, 41);
+}
+
+#root {
+  width: 100%;
+  background-color: rgb(43, 41, 41);
+  margin: auto;
+}
+
+.app-container,
+.report-container {
+  width: 70%;
+  margin: auto;
+}
+
+.editor-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.item,
+.report-container {
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 15px;
+  margin-top: 18px;
+  box-shadow: 2px 3px 10px;
+  background: transparent;
+  border-radius: 2px;
+}
+
+.back-to-list-button {
+  color: wheat;
+}
+
+h2,
+.created-date-panel,
+.done-date-panel,
+.status-panel,
+.list-filter-container,
+.todo-text,
+.empty-list {
+  color: rgba(255, 253, 253, 0.815);
+  font-family: cursive;
+}
+
+button,
+.add-todo-button,
+.clear-form-button {
+  font-family: cursive;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid rgb(66, 65, 65);
+}
+
+button:hover {
+  box-shadow: inset 2px 3px 10px;
+  transition: 400ms;
+}
+
+.done-date-panel {
+  color: #bbbbf7;
+}
+
+h2 {
+  font-style: italic;
+}
+
+.list-filter-container a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.945);
+}
+
+.list-filter-container a:hover {
+  color: #bbbbf7;
+}
+
+.list-filter-container {
+  margin-bottom: 20px;
+}
+
+.report-info {
+  text-align: center;
+  color: #bbbbf7;
+}
+
+.postponed-info,
+.resumed-info,
+.done-info,
+.deleted-info {
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.877);
+  font-family: cursive;
+}
+
+.back-button {
+  margin: 20px;
+  padding: 1px 30px;
+  color: #e99b0a;
+}
+
+.clear-statistics-button {
+  margin: 20px;
+  padding: 1px 30px;
+  color: #ff3838;
+}
+
+.result {
+  padding-left: 10px;
+  font-weight: 800;
+  color: rgb(220, 182, 255);
 }
