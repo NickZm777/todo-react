@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "../Button/Button.jsx";
+
 const Item = () => {
   return (
     <div className="item">
@@ -9,10 +11,10 @@ const Item = () => {
         <p className="created-date-panel">Created: Date - Time</p>
       </div>
       <div className="control-block">
-        <button className="view-button">View</button>
-        <button className="postpone-button">Postpone</button>
-        <button className="done-button">Done</button>
-        <button className="delete-button">Delete</button>
+        <Button class="view-button" name="View" />
+        <Button class="postpone-button" name="Postpone" />
+        <Button class="done-button" name="Done" />
+        <Button class="delete-button" name="Delete" />
       </div>
     </div>
   );

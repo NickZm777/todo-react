@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item/Item.jsx";
+import { NavLink } from "react-router-dom";
 
 const TodoList = () => {
   return (
@@ -10,7 +11,7 @@ const TodoList = () => {
         <span className="total-counter-number">Number</span>
       </h2>
       <div className="statistics">
-        <a href="#">Show statistics</a>
+        <NavLink to="/statistics">Statistics</NavLink>
       </div>
       <div className="todo-list">
         <Item />

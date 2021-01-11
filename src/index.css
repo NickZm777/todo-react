@@ -27,7 +27,7 @@ body {
 }
 
 .app-container,
-.report-container {
+.reportContainer {
   width: 70%;
   margin: auto;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .item,
-.report-container {
+.reportContainer {
   padding-bottom: 10px;
   padding-left: 5px;
   padding-right: 5px;
@@ -100,36 +100,4 @@ h2 {
 
 .list-filter-container {
   margin-bottom: 20px;
-}
-
-.report-info {
-  text-align: center;
-  color: #bbbbf7;
-}
-
-.postponed-info,
-.resumed-info,
-.done-info,
-.deleted-info {
-  padding: 20px;
-  color: rgba(255, 255, 255, 0.877);
-  font-family: cursive;
-}
-
-.back-button {
-  margin: 20px;
-  padding: 1px 30px;
-  color: #e99b0a;
-}
-
-.clear-statistics-button {
-  margin: 20px;
-  padding: 1px 30px;
-  color: #ff3838;
-}
-
-.result {
-  padding-left: 10px;
-  font-weight: 800;
-  color: rgb(220, 182, 255);
 }

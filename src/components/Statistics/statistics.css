@@ -1,0 +1,28 @@
+.report-info {
+  text-align: center;
+  color: #bbbbf7;
+}
+
+.infoSpan {
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.877);
+  font-family: cursive;
+}
+
+.backButton {
+  margin: 20px;
+  padding: 1px 30px;
+  color: #e99b0a;
+}
+
+.clearDeleteStatisticsButton {
+  margin: 20px;
+  padding: 1px 30px;
+  color: #ff3838;
+}
+
+.resultSpan {
+  padding-left: 10px;
+  font-weight: 800;
+  color: rgb(220, 182, 255);
+}
