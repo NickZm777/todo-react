@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Statistics = () => {
   return (
     <div className="reportContainer">
-      <h1 className="reortInfo">TODO Statistics</h1>
+      <h1 className="reportInfo">TODO Statistics</h1>
       <StatInfoBlock name="Total Todo in-process:" result="5" />
       <StatInfoBlock name="Total Todo postponed:" result="2" />
       <StatInfoBlock name="Total Todo done:" result="2" />
@@ -17,7 +17,7 @@ const Statistics = () => {
         name="Clear deleted-statistics"
       />
       <div>
-        <NavLink to="/">Back to the Future</NavLink>
+        <NavLink to="/">Back to main Page</NavLink>
       </div>
     </div>
   );

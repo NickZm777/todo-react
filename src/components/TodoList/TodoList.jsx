@@ -1,6 +1,7 @@
 import React from "react";
 import Item from "./Item/Item.jsx";
 import { NavLink } from "react-router-dom";
+import allTodo from "../Storage/Storage.jsx";
 
 const TodoList = () => {
   return (
@@ -14,8 +15,13 @@ const TodoList = () => {
         <NavLink to="/statistics">Statistics</NavLink>
       </div>
       <div className="todo-list">
-        <Item />
-        <Item />
+        {allTodo.map((obj) => (
+          <Item
+            text={obj.text}
+            state={obj.state}
+            dateCreated={obj.dateCreated}
+          />
+        ))}
       </div>
     </div>
   );

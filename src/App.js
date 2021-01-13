@@ -1,6 +1,5 @@
 import "./App.css";
-import EditForm from "./components/EditForm/EditForm.jsx";
-import TodoList from "./components/TodoList/TodoList.jsx";
+
 import "./components/EditForm/editForm.css";
 import "./components/TodoList/todoList.css";
 import "./components/TodoList/todoList.css";
@@ -10,16 +9,13 @@ import "./components/TodoList/Button/button.css";
 import "./components/Statistics/statistics.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import Statistics from "./components/Statistics/Statistics.jsx";
+import MainPage from "./components/MainPage/MainPage.jsx";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
-        <Route path="/" component={(EditForm, TodoList)} />
-      </div>
-      <div>
-        <Route path="/statistics" component={Statistics} />
-      </div>
+      <Route exact path="/" component={MainPage} />
+      <Route exact path="/statistics" component={Statistics} />
     </BrowserRouter>
   );
 }
