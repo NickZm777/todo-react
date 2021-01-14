@@ -8,8 +8,8 @@ const TodoList = () => {
     <div className="todo-list-container">
       <h1>My ToDos</h1>
       <h2>
-        <span className="total-counter-text">Total ToDo Count</span>
-        <span className="total-counter-number">Number</span>
+        <span className="total-counter-text">Total ToDo Count: </span>
+        <span className="total-counter-number">{allTodo.length}</span>
       </h2>
       <div className="statistics">
         <NavLink to="/statistics">Statistics</NavLink>
@@ -17,6 +17,7 @@ const TodoList = () => {
       <div className="todo-list">
         {allTodo.map((obj) => (
           <Item
+            key={obj.id}
             text={obj.text}
             state={obj.state}
             dateCreated={obj.dateCreated}

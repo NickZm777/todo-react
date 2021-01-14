@@ -24,11 +24,11 @@ const Item = (props) => {
     <div className="item">
       <h3>{props.text}</h3>
       <div className="info-block">
-        <p className="status-panel">{props.state}</p>
-        <p className="created-date-panel">
+        <div className="status-panel">{props.state}</div>
+        <div className="created-date-panel">
           {" "}
           <FormatDateForPanel prefix="Created" date={props.dateCreated} />{" "}
-        </p>
+        </div>
       </div>
       <div className="control-block">
         <Button class="view-button" name="View" />
