@@ -1,11 +1,10 @@
 import React from "react";
-import TodoList from "../../TodoList/TodoList.jsx";
 
 function q() {
-  console.log("FormF updated");
+  console.log("FormInput updated");
 }
 
-const FormF = (props) => {
+const FormInput = (props) => {
   q();
   return (
     <div className="form">
@@ -31,4 +30,4 @@ const FormF = (props) => {
   );
 };
 
-export default FormF;
+export default FormInput;

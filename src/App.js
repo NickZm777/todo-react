@@ -1,9 +1,7 @@
 import "./App.css";
 
-import "./components/EditForm/editForm.css";
 import "./components/TodoList/todoList.css";
-import "./components/TodoList/todoList.css";
-import "./components/EditForm/Form/form.css";
+import "./components/Form/form.css";
 import "./components/TodoList/Item/item.css";
 import "./components/TodoList/Button/button.css";
 import "./components/Statistics/statistics.css";

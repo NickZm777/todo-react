@@ -1,7 +1,5 @@
 import React from "react";
-import allTodo from "../../Storage/Storage.jsx";
-import TodoList from "../../TodoList/TodoList.jsx";
-import FormF from "../Form/FormF.jsx";
+import FormInput from "./FormInput.jsx";
 
 class Form extends React.Component {
   constructor(props) {
@@ -10,10 +8,15 @@ class Form extends React.Component {
     this.counterID = 1;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.allTodo = props.allTodo;
   }
 
   handleChange(event) {
     this.setState({ value: event.target.value });
+  }
+
+  q() {
+    console.log("Form add todo updated");
   }
 
   handleSubmit(event) {
@@ -26,12 +29,13 @@ class Form extends React.Component {
       dateCompleted: null,
       id: this.counterID,
     };
-    allTodo.push(todo);
+    this.allTodo.push(todo);
+    this.q();
   }
 
   render() {
     return (
-      <FormF
+      <FormInput
         handleSubmit={this.handleSubmit}
         handleChange={this.handleChange}
         state={this.state.value}

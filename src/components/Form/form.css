@@ -1,3 +1,14 @@
+h1 {
+  color: #bbbbf7;
+  font-family: cursive;
+  font-weight: bold;
+}
+.edit-form-container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: comic sans ms;
+}
+
 .form-row-left {
   margin-bottom: 10px;
 }
