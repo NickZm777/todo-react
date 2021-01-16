@@ -3,7 +3,7 @@ import StatInfoBlock from "./StatInfoBlock/StatInfoBlock.jsx";
 import Button from "../TodoList/Button/Button.jsx";
 import { NavLink } from "react-router-dom";
 
-const Statistics = () => {
+function Statistics() {
   return (
     <div className="reportContainer">
       <h1 className="reportInfo">TODO Statistics</h1>
@@ -21,6 +21,6 @@ const Statistics = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Statistics;

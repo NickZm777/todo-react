@@ -1,5 +1,7 @@
 import React from "react";
 import allTodo from "../../Storage/Storage.jsx";
+import TodoList from "../../TodoList/TodoList.jsx";
+import FormF from "../Form/FormF.jsx";
 
 class Form extends React.Component {
   constructor(props) {
@@ -29,30 +31,11 @@ class Form extends React.Component {
 
   render() {
     return (
-      <div className="form">
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-row-left">
-            <input
-              className="todo-text"
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange}
-            ></input>
-          </div>
-          <div className="form-row-right">
-            <input
-              className="add-todo-button"
-              type="submit"
-              value="Add"
-            ></input>
-            <input
-              className="clear-form-button"
-              type="button"
-              value="Clear"
-            ></input>
-          </div>
-        </form>
-      </div>
+      <FormF
+        handleSubmit={this.handleSubmit}
+        handleChange={this.handleChange}
+        state={this.state.value}
+      />
     );
   }
 }
