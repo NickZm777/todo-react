@@ -5,14 +5,14 @@ import { NavLink } from "react-router-dom";
 import reduxState from "../redux/redux.jsx";
 
 function checker(checker, key) {
-  const array = [];
+  let counter = 0;
   checker.forEach((element) => {
     if (element.state === key) {
-      array.push(element.state);
+      counter++;
     }
   });
-  console.log(`statistics - ${key}: ${array.length}`);
-  return array.length;
+  console.log(`statistics - ${key}: ${counter}`);
+  return counter;
 }
 
 function Statistics() {
