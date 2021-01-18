@@ -21,7 +21,7 @@ class Form extends React.Component {
     counter = this.counterID;
     const todo = {
       text: this.state.value,
-      state: "just added",
+      state: "in-process",
       dateCreated: Date().toString(),
       dateCompleted: null,
       id: counter,

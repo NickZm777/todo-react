@@ -1,8 +1,7 @@
 import React from "react";
 import Form from "../Form/Form.jsx";
 import TodoList from "../TodoList/TodoList.jsx";
-
-const reduxState = [];
+import reduxState from "../redux/redux.jsx";
 
 class MainPage extends React.Component {
   constructor(props) {

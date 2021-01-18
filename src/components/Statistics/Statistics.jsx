@@ -2,15 +2,39 @@ import React from "react";
 import StatInfoBlock from "./StatInfoBlock/StatInfoBlock.jsx";
 import Button from "../TodoList/Button/Button.jsx";
 import { NavLink } from "react-router-dom";
+import reduxState from "../redux/redux.jsx";
+
+function checker(checker, key) {
+  const array = [];
+  checker.forEach((element) => {
+    if (element.state === key) {
+      array.push(element.state);
+    }
+  });
+  console.log(`statistics - ${key}: ${array.length}`);
+  return array.length;
+}
 
 function Statistics() {
   return (
     <div className="reportContainer">
       <h1 className="reportInfo">TODO Statistics</h1>
-      <StatInfoBlock name="Total Todo in-process:" result="5" />
-      <StatInfoBlock name="Total Todo postponed:" result="2" />
-      <StatInfoBlock name="Total Todo done:" result="2" />
-      <StatInfoBlock name="Total Todo deleted:" result="8" />
+      <StatInfoBlock
+        name="Total Todo in-process:"
+        result={checker(reduxState, "in-process")}
+      />
+      <StatInfoBlock
+        name="Total Todo postponed:"
+        result={checker(reduxState, "postponed")}
+      />
+      <StatInfoBlock
+        name="Total Todo done:"
+        result={checker(reduxState, "done")}
+      />
+      <StatInfoBlock
+        name="Total Todo deleted:"
+        result={checker(reduxState, "deleted")}
+      />
       <Button class="backButton" name="Return to list" />
       <Button
         class="clearDeleteStatisticsButton"
