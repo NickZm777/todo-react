@@ -1,11 +1,6 @@
 import React from "react";
 
-function q() {
-  console.log("FormInput updated");
-}
-
 const FormInput = (props) => {
-  q();
   return (
     <div className="form">
       <form onSubmit={props.handleSubmit}>

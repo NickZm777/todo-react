@@ -1,36 +1,32 @@
 import React from "react";
 import FormInput from "./FormInput.jsx";
+let counter = 1;
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: "" };
-    this.counterID = 1;
+    this.counterID = counter;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.allTodo = props.allTodo;
   }
 
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
 
-  q() {
-    console.log("Form add todo updated");
-  }
-
   handleSubmit(event) {
     event.preventDefault();
     this.counterID++;
+    counter = this.counterID;
     const todo = {
       text: this.state.value,
       state: "just added",
       dateCreated: Date().toString(),
       dateCompleted: null,
-      id: this.counterID,
+      id: counter,
     };
-    this.allTodo.push(todo);
-    this.q();
+    this.props.allTodoUpdate(todo);
   }
 
   render() {
