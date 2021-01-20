@@ -20,6 +20,7 @@ const TodoList = (props) => {
             text={obj.text}
             state={obj.state}
             dateCreated={obj.dateCreated}
+            dateCompleted={obj.dateCompleted}
           />
         ))}
       </div>

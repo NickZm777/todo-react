@@ -27,7 +27,11 @@ const Item = (props) => {
         <div className="status-panel">{props.state}</div>
         <div className="created-date-panel">
           {" "}
-          <FormatDateForPanel prefix="Created" date={props.dateCreated} />{" "}
+          <FormatDateForPanel prefix="Created" date={props.dateCreated} />
+          <FormatDateForPanel
+            prefix="Completed"
+            date={props.dateCompleted === null ? null : props.dateCompleted}
+          />
         </div>
       </div>
       <div className="control-block">

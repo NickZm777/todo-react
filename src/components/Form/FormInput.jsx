@@ -3,7 +3,7 @@ import React from "react";
 const FormInput = (props) => {
   return (
     <div className="form">
-      <form onSubmit={props.handleSubmit}>
+      <form onSubmit={props.handleSubmit} onReset={props.reset}>
         <div className="form-row-left">
           <input
             className="todo-text"
@@ -16,7 +16,7 @@ const FormInput = (props) => {
           <input className="add-todo-button" type="submit" value="Add"></input>
           <input
             className="clear-form-button"
-            type="button"
+            type="reset"
             value="Clear"
           ></input>
         </div>

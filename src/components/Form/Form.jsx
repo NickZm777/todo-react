@@ -1,43 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import FormInput from "./FormInput.jsx";
-let counter = 1;
 
-class Form extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
-    this.counterID = counter;
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+const Form = (props) => {
+  const [todoName, SetTodoName] = useState("");
+  const [counter, SetCounter] = useState(1);
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
-    this.counterID++;
-    counter = this.counterID;
+
     const todo = {
-      text: this.state.value,
+      text: todoName,
       state: "in-process",
       dateCreated: Date().toString(),
       dateCompleted: null,
       id: counter,
     };
-    this.props.allTodoUpdate(todo);
+    props.allTodoUpdate(todo);
+    SetCounter(counter + 1);
+    SetTodoName("");
   }
 
-  render() {
-    return (
-      <FormInput
-        handleSubmit={this.handleSubmit}
-        handleChange={this.handleChange}
-        state={this.state.value}
-      />
-    );
-  }
-}
+  return (
+    <FormInput
+      handleSubmit={handleSubmit}
+      handleChange={(event) => SetTodoName(event.target.value)}
+      state={todoName}
+      reset={() => SetTodoName("")}
+    />
+  );
+};
 
 export default Form;
